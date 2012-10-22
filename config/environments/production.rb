@@ -9,7 +9,11 @@ Blog::Application.configure do
   config.action_controller.perform_caching = true
 
   # Disable Rails's static asset server (Apache or nginx will already do this)
+<<<<<<< HEAD
   config.serve_static_assets = true
+=======
+  config.serve_static_assets = false
+>>>>>>> 7fd92a88cf0d00efc98440d144c299d69f4b3dd2
 
   # Compress JavaScripts and CSS
   config.assets.compress = true
@@ -20,7 +24,11 @@ Blog::Application.configure do
   # Generate digests for assets URLs
   config.assets.digest = true
 
+<<<<<<< HEAD
   # Defaults to nil and saved in location specified by config.assets.prefix
+=======
+  # Defaults to Rails.root.join("public/assets")
+>>>>>>> 7fd92a88cf0d00efc98440d144c299d69f4b3dd2
   # config.assets.manifest = YOUR_PATH
 
   # Specifies the header that your server uses for sending files

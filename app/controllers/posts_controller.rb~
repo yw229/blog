@@ -1,0 +1,40 @@
+class PostsController < ApplicationController
+  def index
+	@posts = Post.all
+  end
+
+  def show
+	@p = Post.find(params[:id])
+  end
+
+  def new
+	@p = Post.new
+  end
+
+  def create
+	@p = Post.new(params[:post])
+	if @p.save 
+		redirect_to new_post_path, :notice=>"New Post was saved"
+	else
+		render "new"
+	end
+
+  end
+
+  def edit
+	@p = Post.find(params[:id])
+	
+  end
+
+  def update
+	@p =Post.find(params[:id])
+	if @p.update_attributes(params[:post])
+		redirect_to edit_post_path, :notice=>"Post has been updated"
+	else
+		render "edit"
+	end
+  end
+
+  def delete
+  end
+end

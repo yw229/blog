@@ -39,9 +39,12 @@ module Blog
     # Configure sensitive parameters which will be filtered from the log file.
     config.filter_parameters += [:password]
 
+<<<<<<< HEAD
     # Enable escaping HTML in JSON.
     config.active_support.escape_html_entities_in_json = true
 
+=======
+>>>>>>> 7fd92a88cf0d00efc98440d144c299d69f4b3dd2
     # Use SQL instead of Active Record's schema dumper when creating the database.
     # This is necessary if your schema can't be completely dumped by the schema dumper,
     # like if you have constraints or database-specific column types

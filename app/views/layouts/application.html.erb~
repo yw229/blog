@@ -8,15 +8,8 @@
 </head>
 <body>
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 <% flash.each do |key, value|%>
  <p> <%= value%> </p>
-<%end%>
->>>>>>> origin/master
->>>>>>> 7fd92a88cf0d00efc98440d144c299d69f4b3dd2
 <%= yield %>
 
 </body>

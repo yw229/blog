@@ -1,0 +1,31 @@
+<h1>Posts#new</h1>
+<p>Find me in app/views/posts/new.html.erb</p>
+
+<h1>Add a new Post</h2>
+
+<%= form_for @p do |f|%>
+  <% if @p.errors.any? %>
+  <h3>Errors:</h3>
+	<ul>
+	<% @p.errors.full_messages.each do |msg|%>
+	<li> <small>	<%= msg %>  </small ></li>
+	<% end %>
+	</ul>
+   <% end %>
+
+ 
+<p>
+ <%= f.label :title%>	 </br>
+ <%= f.text_field :title %>
+</p>
+
+<p>
+ <%= f.label :content%>	 </br>
+ <%= f.text_area :content %>
+</p>
+
+<p>
+ <%= f.submit "Add new Post "%>	 </br>
+
+</p>
+<%end%>

@@ -1,0 +1,30 @@
+<h1>Posts#edit</h1>
+<p>Find me in app/views/posts/edit.html.erb</p>
+
+<h1>Edit Post</h1>
+
+
+<%= form_for @p do |f| %>
+
+  <% if @p.errors.any? %>
+  <h3>Errors:</h3>
+	<ul>
+	<% @p.errors.full_messages.each do |msg|%>
+	<li> <small>	<%= msg %>  </small ></li>
+	<% end %>
+	</ul>
+   <% end %>
+
+<p>
+	<%= f.label :title %> </br>
+	<%= f.text_field :title %>
+</p>
+
+<p>
+	<%= f.label :content %> </br>
+	<%= f.text_area :content %>
+</p>
+<p>
+	 <%= f.submit "Update the Post "%>	 </br>
+</p>
+<%end%>

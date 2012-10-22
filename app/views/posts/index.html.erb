@@ -1,0 +1,15 @@
+<h1>Hello World</h1>
+<p>Welcome to Ruby Blog</p>
+
+<% @posts.each do |p|%>
+<h2> <%= link_to p.title ,p%> </h2>
+ <p>	<%= p.content %> </p> 
+ <small><%= p.created_at %> </small>
+ <p>	
+	<%= link_to "Edit", edit_post_path(p) %> |	
+	<%= link_to "Delete", p, :confirm=> "Are you sure ?", :method=> :delete %>
+ </p>
+ <hr />
+<% end%>
+
+<%= link_to "New Post", new_post_path%>
