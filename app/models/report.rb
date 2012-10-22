@@ -1,0 +1,3 @@
+class Report < ActiveRecord::Base
+  attr_accessible :Company, :Completion_Date, :Dept_Name, :First_Name, :Job_title, :Kerberos, :Last_Name, :email
+end

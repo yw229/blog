@@ -1,0 +1,57 @@
+<%= form_for(@report) do |f| %>
+  <% if @report.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@report.errors.count, "error") %> prohibited this report from being saved:</h2>
+
+      <ul>
+      <% @report.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :First_Name %><br />
+    <%= f.text_field :First_Name %>
+  </div>
+  <div class="field">
+    <%= f.label :string %><br />
+    <%= f.text_field :string %>
+  </div>
+  <div class="field">
+    <%= f.label :Last_Name %><br />
+    <%= f.text_field :Last_Name %>
+  </div>
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.text_field :email %>
+  </div>
+  <div class="field">
+    <%= f.label :Kerberos %><br />
+    <%= f.text_field :Kerberos %>
+  </div>
+  <div class="field">
+    <%= f.label :Company %><br />
+    <%= f.text_field :Company %>
+  </div>
+  <div class="field">
+    <%= f.label :Dept_Name %><br />
+    <%= f.text_field :Dept_Name %>
+  </div>
+  <div class="field">
+    <%= f.label :string %><br />
+    <%= f.text_field :string %>
+  </div>
+  <div class="field">
+    <%= f.label :Job_title %><br />
+    <%= f.text_field :Job_title %>
+  </div>
+  <div class="field">
+    <%= f.label :Completion_Date %><br />
+    <%= f.datetime_select :Completion_Date %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
